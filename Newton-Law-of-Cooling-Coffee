@@ -1,0 +1,22 @@
+dt = 2
+takhir = 10
+Tkopi=70
+Tluar=20
+n=int((takhir-0)/dt)
+k=0.019
+T=[]
+tw=[0]
+t=0
+Tt=Tkopi
+
+print ()
+print ("menit ke- ","Suhu Kopi (C)   ")
+
+for i in range (n) :
+    t+=dt
+    tw.append(t)
+for i in range (n+1):
+    T.append(Tt)
+    Tt-=(dt*k*(Tt-Tluar))
+    print ("     ",tw[i],"         ",round(T[i],4))
+print ()
